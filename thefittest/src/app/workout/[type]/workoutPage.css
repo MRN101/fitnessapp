@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #00aaff; 
+    --secondary-color: #ffffff; 
+    --bg-color: #000; 
+    --text-stroke: #333; 
+}
+
+.workout {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.workout__exercises {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.workout__exercise {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.workout__exercise--reverse {
+    flex-direction: row-reverse;
+}
+
+.workout__exercise__image img {
+    max-width: 50%;
+    height: auto;
+    min-width: 250px;
+    border-radius: 10px;
+}
+
+.workout__exercise__content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.workout__exercise--reverse .workout__exercise__content {
+    text-align: right;
+    align-items: flex-end;
+}
+
+.workout__exercise__content h2 {
+    font-size: 50px;
+    font-weight: 900;
+    -webkit-text-stroke: 1px var(--text-stroke);
+    color: var(--primary-color);
+    text-shadow: 2px 2px 5px rgba(0, 170, 255, 0.5);
+}
+
+.workout__exercise__content span {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 5px 20px;
+    border-radius: 35px;
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+}
+
+.workout__exercise__content span:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    transform: scale(1.05);
+}
+
+.workout__exercise__content p {
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--primary-color);
+}
+
+.workout__exercises h3 {
+    -webkit-text-stroke: 1px var(--primary-color);
+    color: transparent;
+    font-size: 10rem;
+    font-weight: 900;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+    width: 15rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.workout__exercises h3:hover {
+    transform: rotate(10deg) scale(1.1);
+}

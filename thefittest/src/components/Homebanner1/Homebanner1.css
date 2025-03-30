@@ -1,0 +1,110 @@
+.meters {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 15px;
+    background-color: #121212; 
+    padding: 20px;
+    border-radius: 12px;
+}
+.meters .card {
+    width: 220px;
+    height: 220px;
+    max-width: 260px;
+    min-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(173, 216, 230, 0.3); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    background: var(--card-bg, linear-gradient(135deg, #1e1e1e, #333)); 
+    border: 1px solid rgba(173, 216, 230, 0.3);
+}
+
+
+.meters .card[data-index="1"] { --card-bg: linear-gradient(135deg, #003366, #66ccff); } 
+.meters .card[data-index="2"] { --card-bg: linear-gradient(135deg, #004488, #99ddff); } 
+.meters .card[data-index="3"] { --card-bg: linear-gradient(135deg, #002244, #55bbff); } 
+.meters .card[data-index="4"] { --card-bg: linear-gradient(135deg, #005577, #77ccee); } 
+.meters .card[data-index="5"] { --card-bg: linear-gradient(135deg, #002a55, #44aaff); } 
+.meters .card[data-index="6"] { --card-bg: linear-gradient(135deg, #001122, #2299ff); } 
+
+.meters .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(173, 216, 230, 0.5);
+}
+
+
+.meters .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.meters .card-header-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 49%;
+    background-color: rgba(255, 255, 255, 0.1);
+    aspect-ratio: 1/1;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(173, 216, 230, 0.2);
+    border-radius: 10px;
+    color: white;
+}
+
+.meters .card-header-box-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: #aadfff;
+}
+
+.meters .card-header-box-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.meters .card button {
+    background-color: rgba(173, 216, 230, 0.2);
+    color: #aadfff;
+    border: 1px solid #aadfff;
+    border-radius: 18px;
+    padding: 6px 12px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(173, 216, 230, 0.3);
+}
+
+.meters .card button:hover {
+    background-color: #aadfff;
+    color: #121212;
+    box-shadow: 0 4px 10px rgba(173, 216, 230, 0.5);
+}
+
+
+.meters .textincircle {
+    color: #fff;
+    font-weight: bold;
+}
+.progress-title {
+    color: lightblue;
+    font-size: 24px; /* Adjust size if needed */
+    font-weight: bold;
+}
